@@ -1035,7 +1035,10 @@ Mesh files no longer used:
 	<property class="Action0"><!-- AttackAction -->
 		<property name="Class" value="Melee"/>
 		<property name="Delay" value="0.8"/>
-		<property name="Range" value="1.65"/> <!-- This not what "clientside melee combat" means. =) This is the adjustment afterwards due to code changes. -->
+		<!-- <property name="Range" value="1.65"/>  -->
+		<!-- This not what "clientside melee combat" means. =) This is the adjustment afterwards due to code changes. -->
+		<!-- Zombie Circle Fix -->
+		<property name="Range" value="2.3"/>
 		<property name="Sphere" value="0.1"/>
 		<property name="Block_range" value="2.5"/>
 		<property name="DamageEntity" value="10"/>

@@ -1,0 +1,12 @@
+One item to do each task
+One shovel
+One pick
+One Axe
+etc...
+
+
+Add cordage to replace... many instances of cloth/hide
+
+Range of damage reduced
+Skill/perks mainly modify it
+

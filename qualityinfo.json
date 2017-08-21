@@ -1,0 +1,107 @@
+{
+    "declaration": {
+        "attributes": {
+            "version": "1.0",
+            "encoding": "utf-8"
+        }
+    },
+    "elements": [
+        {
+            "type": "element",
+            "name": "qualityinfo",
+            "elements": [
+                {
+                    "type": "comment",
+                    "comment": "Broken Grey"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "0",
+                        "color": "808080"
+                    },
+                    "elements": []
+                },
+                {
+                    "type": "comment",
+                    "comment": "Faulty Brown"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "1",
+                        "color": "9C8867"
+                    },
+                    "elements": []
+                },
+                {
+                    "type": "comment",
+                    "comment": "Poor Orange"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "2",
+                        "color": "CF7F29"
+                    },
+                    "elements": []
+                },
+                {
+                    "type": "comment",
+                    "comment": "Good Yellow"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "3",
+                        "color": "A2A41B"
+                    },
+                    "elements": []
+                },
+                {
+                    "type": "comment",
+                    "comment": "Fine Green"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "4",
+                        "color": "42C234"
+                    },
+                    "elements": []
+                },
+                {
+                    "type": "comment",
+                    "comment": "Great Blue"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "5",
+                        "color": "315DCE"
+                    },
+                    "elements": []
+                },
+                {
+                    "type": "comment",
+                    "comment": "Flawless Magenta"
+                },
+                {
+                    "type": "element",
+                    "name": "quality",
+                    "attributes": {
+                        "key": "6",
+                        "color": "A42ACC"
+                    },
+                    "elements": []
+                }
+            ]
+        }
+    ]
+}
