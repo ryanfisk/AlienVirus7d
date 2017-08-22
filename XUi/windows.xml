@@ -119,12 +119,189 @@
 
 		</sprite>
 		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0" >
-
+				
 		</texture>
 		<sprite pos="200,-60" sprite="" color="255,255,255,255" globalopacitymod="1.8">
 			<label depth="2" width="300" height="30" text="{daytitle}: {day|always}  {timetitle}: {time|always}" font_size="28" pivot="center" effect="outline" upper_case="true" justify="center"/>
 		</sprite>
 	</window>
+  <!-- R.E. LXIX --> <!-- BEGIN_MOD: Red Eagle LXIX's Custom HUD : v0.19 : A16.1(b1) -->
+	  <!-- R.E. LXIX --> <!-- Window that replaces the default compass adding the center marker and reformatting the time to match AirTemp/Wind/Elevation window.-->
+	<window name="windowCompassRELXIX" style="compass.window" controller="CompassWindow">
+		<sprite style="compass.window.background.border.mod_RELXIX"/>
+		<sprite style="compass.window.background.mod_RELXIX"/>
+		<sprite style="compass.window.compass.background.mod_RELXIX"/>
+
+		<texture style="compass.window.compass.texture.mod_RELXIX" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0" />
+
+		<!-- Lines below add the center bar to the compass and move the time into the format and position to match rest of display -->
+		<sprite sprite="ui_game_header_fill" depth="10" width="2" height="43" pos="199,0" type="sliced" fillcenter="false" color="255,255,0,35" /> <!-- This adds the center bar to the compass -->
+		<sprite depth="2" name="dayTimeIcon" size="20,20" pos="4,-44" sprite="ui_game_symbol_clock" color="*" foregroundlayer="true"/>
+		<label depth="2" width="172" pos="32,-43" height="22" text="  [DECEA3]{day|always}  {time|always}[-]" font_size="20" /> <!--pivot="center" effect="outline" justify="center"/>-->
+	</window> 
+	
+  <!-- R.E. LXIX --> <!-- Window that displays Air Temp, Wind Speed, Current Elevation -->
+	<window name="mapStatsHUD" width="400" height="32" pos="-200,-49" controller="MapStats" anchor="CenterTop">		
+			<sprite depth="2" name="tempIcon" size="20,20" pos="135,-4" sprite="ui_game_symbol_temperature" color="*" foregroundlayer="true"/>
+			<label depth="2" name="tempLabel" pos="160,-3" width="172" height="22" text=" [DECEA3]{maptemperature}[-]" font_size="20"/>
+			
+			<sprite depth="2" name="windIcon" size="20,20" pos="220,-4" sprite="ui_game_symbol_wind" color="*" foregroundlayer="true"/>
+			<label depth="2" name="windLabel" pos="245,-3" width="172" height="22" text=" [DECEA3]{mapwind} MPH[-]" font_size="20"/>
+			
+			<sprite depth="2" name="elevIcon" size="20,20" pos="315,-4" sprite="ui_game_symbol_climb" color="*" foregroundlayer="true"/>
+			<label depth="2" name="elevLabel" pos="345,-3" width="172" height="22" text=" [DECEA3]{mapelevation} M[-]" font_size="20"/>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays the Day/Time when compass not available during various menus -->
+	<window name="mapTimeHUD" width="400" height="32" pos="-490,-20" controller="MapStats" anchor="CenterTop">		
+			<sprite depth="2" name="dayTimeIcon" size="20,20" pos="0,0" sprite="ui_game_symbol_clock" color="*" foregroundlayer="true"/>
+			<label depth="2" name="dayTimeLabel" pos="28,0" width="172" height="22" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="20"/>
+	</window>
+	
+  <!-- R.E. LXIX --> <!-- Window that displays Numbers on the tool belt for each slot -->
+	<window name="windowToolbeltNumbersHUD" depth="13" width="603" height="22" pos="-339,84" anchor="CenterBottom" controller="ToolbeltWindow" visible="{toolbeltvisible}">		
+				<label name="slot1" pos="22,0" width="22" height="22" text="  [DECEA3]1" font_size="20" justify="center"/>
+				<label name="slot2" pos="97,0" width="22" height="22" text="  [DECEA3]2" font_size="20" justify="center"/>
+				<label name="slot3" pos="172,0" width="22" height="22" text="  [DECEA3]3" font_size="20" justify="center"/>
+				<label name="slot4" pos="247,0" width="22" height="22" text="  [DECEA3]4" font_size="20" justify="center"/>
+				<label name="slot5" pos="322,0" width="22" height="22" text="  [DECEA3]5" font_size="20" justify="center"/>
+				<label name="slot6" pos="397,0" width="22" height="22" text="  [DECEA3]6" font_size="20" justify="center"/>
+				<label name="slot7" pos="472,0" width="22" height="22" text="  [DECEA3]7" font_size="20" justify="center"/>
+				<label name="slot8" pos="547,0" width="22" height="22" text="  [DECEA3]8" font_size="20" justify="center"/>
+	</window>
+	
+  <!-- R.E. LXIX --> <!-- Window that displays XP bar and level -->
+	<window name="playerXPHUD" width="603" height="24" depth="2" anchor="CenterBottom" pos="-313,116" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="PlayerStatsWindow">
+			<sprite depth="2" pos="0, -14" width="603" height="10" type="sliced" color="0,0,0,150" />
+			<sprite depth="2" pos="-1, -15" width="601" height="8" type="sliced" color="64,64,64,150" />
+			<sprite depth="2" pos="-1, -15" width="601" height="8" type="filled" color="49,91,203,192" fill="{playerlevelfill}" />
+			<label depth="3" width="40" pos="279,-10" font_size="22" text=" [DECEA3]{playerlevel}[-]" justify="center"/>
+	  </rect>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays skillpoints available.  Note: does not update real-time only on GUI change events that cause the window to refresh -->
+  <window name="playerSkillPointsHUDBar" width="603" height="24" depth="2" anchor="CenterBottom" pos="-313,106" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="SkillInfoWindow">
+      <label pos="303, 0" depth="2" width="300" height="22" text="{skillpointsavailable}" font_size="22" color="222,206,163,192" justify="right" />
+      <rect depth="3" width="0" height="0" pos="99999,99999" controller="Paging">
+        <panel pos="0,0" width="0" height="0" disableautobackground="true" visible="{showPaging}">
+          <button depth="4" name="pageDown" style="icon30px, press" pos="0,0" sprite="ui_game_symbol_arrow_left" pivot="center" sound="[paging_click]"/>
+          <button depth="4" name="pageUp" style="icon30px, press" pos="0,0" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]"/>
+        </panel>
+      </rect>
+		</rect>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays skillpoints available.  Note: does not update real-time only on GUI change events that cause the window to refresh -->
+  <window name="playerSkillPointsHUDRight" width="603" height="24" depth="2" anchor="CenterBottom" pos="-12,106" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="SkillInfoWindow">
+      <label pos="303, 0" depth="2" width="300" height="22" text="{skillpointsavailable}" font_size="22" color="222,206,163,192" justify="left" />
+      <rect depth="3" width="0" height="0" pos="99999,99999" controller="Paging">
+        <panel pos="0,0" width="0" height="0" disableautobackground="true" visible="{showPaging}">
+          <button depth="4" name="pageDown" style="icon30px, press" pos="0,0" sprite="ui_game_symbol_arrow_left" pivot="center" sound="[paging_click]"/>
+          <button depth="4" name="pageUp" style="icon30px, press" pos="0,0" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]"/>
+        </panel>
+      </rect>
+		</rect>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays Zombie Kills, and Deaths with static color icon -->
+	<window name="playerZKDHUD" width="400" height="200" anchor="CenterBottom" pos="-350,92" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="PlayerStatsWindow">
+			<sprite depth="1" pos="3, -13" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -14" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-14" sprite="ui_game_symbol_zombie"/>
+				<label depth="2" width="200" pos="-201, -16" font_size="20" text=" [DECEA3]{playerzombiekills}[-]" justify="right"/>
+
+			<sprite depth="1" pos="3, -41" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -42" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-42" sprite="ui_game_symbol_death"/>
+				<label depth="2" width="200" pos="-201,-44" font_size="20" text=" [DECEA3]{playerdeaths}[-]" justify="right"/>
+	  </rect>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays Zombie Kills, PKills, and Deaths with static color icon -->
+	<window name="playerZKPKDHUD" width="400" height="200" anchor="CenterBottom" pos="-350,92" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="PlayerStatsWindow">
+			<sprite depth="1" pos="3, 0" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -1" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-1" sprite="ui_game_symbol_zombie"/>
+				<label depth="2" width="200" pos="-201, -3" font_size="20" text=" [DECEA3]{playerzombiekills}[-]" justify="right"/>
+
+			<sprite depth="1" pos="3, -27" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -28" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-28" sprite="ui_game_symbol_knife"/>
+				<label depth="2" width="200" pos="-201,-30" font_size="20" text=" [DECEA3]{playerpvpkills}[-]" justify="right"/>
+
+			<sprite depth="1" pos="3, -54" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -55" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-55" sprite="ui_game_symbol_death"/>
+				<label depth="2" width="200" pos="-201,-57" font_size="20" text=" [DECEA3]{playerdeaths}[-]" justify="right"/>
+	  </rect>
+	</window>
+	
+
+  <!-- R.E. LXIX --> <!-- Window that displays Zombie Kills, and Deaths with dynamic color change icon -->
+	<window name="playerZKDIcoChngHUD" width="400" height="200" anchor="CenterBottom" pos="-350,92" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="PlayerStatsWindow">
+			<sprite depth="1" pos="3, -13" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -14" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" color="{playerzombiekills},{playerzombiekills},{playerzombiekills}" pos="4,-1" sprite="ui_game_symbol_zombie"/>
+				<label depth="2" width="200" pos="-201, -16" font_size="20" text=" [DECEA3]{playerzombiekills}[-]" justify="right"/>
+
+			<sprite depth="1" pos="3, -41" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -42" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" color="{playerdeaths},{playerdeaths},{playerdeaths}" pos="4,-55" sprite="ui_game_symbol_death"/>
+				<label depth="2" width="200" pos="-201,-44" font_size="20" text=" [DECEA3]{playerdeaths}[-]" justify="right"/>
+	  </rect>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays Zombie Kills, PKills, and Deaths  with dynamic color change icon -->
+	<window name="playerZKPKDIcoChngHUD" width="400" height="200" anchor="CenterBottom" pos="-350,92" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect controller="PlayerStatsWindow">
+			<sprite depth="1" pos="3, 0" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -1" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" color="{playerzombiekills},{playerzombiekills},{playerzombiekills}" pos="4,-1" sprite="ui_game_symbol_zombie"/>
+				<label depth="2" width="200" pos="-201, -3" font_size="20" text=" [DECEA3]{playerzombiekills}[-]" justify="right" />
+
+			<sprite depth="1" pos="3, -27" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -28" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" color="{playerpvpkills},{playerpvpkills},{playerpvpkills}" pos="4,-28" sprite="ui_game_symbol_knife"/>
+				<label depth="2" width="200" pos="-201,-30" font_size="20" text=" [DECEA3]{playerpvpkills}[-]" justify="right" />
+
+			<sprite depth="1" pos="3, -54" width="24" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -55" width="22" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" color="{playerdeaths},{playerdeaths},{playerdeaths}" pos="4,-55" sprite="ui_game_symbol_death"/>
+				<label depth="2" width="200" pos="-201,-57" font_size="20" text=" [DECEA3]{playerdeaths}[-]" justify="right"/>
+	  </rect>
+	</window>
+
+  <!-- R.E. LXIX --> <!-- Window that displays Player Temp, Hunger % and Thirst % -->	
+	<window name="playerStatsHUD" width="400" height="200" pos="178,92" controller="HUDStatBar" visible="{statvisible}" anchor="LeftBottom">
+		<rect controller="PlayerStatsWindow">
+			<sprite depth="1" pos="3, 0" width="105" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -1" width="103" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-1" sprite="ui_game_symbol_cold"/>
+				<label depth="2" width="200" pos="26, -3"  font_size="20" text=" [DECEA3]{playercoretemp}[-]" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="85,-1" sprite="ui_game_symbol_hot"/>
+
+			<sprite depth="1" pos="3, -27" width="105" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -28" width="103" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="1" pos="4, -28" width="103" height="22" type="filled" color="52,174,86,192" fill="{playerfoodfill}" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-28" sprite="ui_game_symbol_fork"/>
+				<label depth="2" width="200" pos="35,-30" name="lblFood" font_size="20" text=" [DECEA3]{playerfood}%[-]" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="85,-28" sprite="ui_game_symbol_hunger"/>
+
+			<sprite depth="1" pos="3, -54" width="105" height="24" type="sliced" color="0,0,0,100" />
+			<sprite depth="1" pos="4, -55" width="103" height="22" type="sliced" color="64,64,64,100" />
+			<sprite depth="1" pos="4, -55" width="103" height="22" type="filled" color="52,137,167,192" fill="{playerwaterfill}" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="4,-55" sprite="ui_game_symbol_water"/>
+				<label depth="2" width="200" pos="35,-57" name="lblWater" font_size="20" text=" [DECEA3]{playerwater}%[-]" />
+			<sprite depth="2" name="windowIcon" style="icon22px" pos="85,-55" sprite="ui_game_symbol_thirst"/>
+	  </rect>
+	</window>
+  <!-- R.E. LXIX --> <!-- END_MOD: Red Eagle LXIX's Custom HUD : v0.19 : A16.1(b1) -->
 
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowCraftingList"  width="397" height="688" controller="CraftingListInfo" panel="Left" cursor_area="true" >

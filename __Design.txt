@@ -9,4 +9,4 @@ Add cordage to replace... many instances of cloth/hide
 
 Range of damage reduced
 Skill/perks mainly modify it
-
+Repair kit to make most items or similar
