@@ -148,6 +148,12 @@ built-in buff variables:
 	<modify id="1" stat="health" amount="-33" rate="1"/>
 </buff>
 
+<!-- FIX FOR TEMP IF OTHER THINGS DON"T WORK -->
+
+<!-- <buff id="StopTempEffects" stack="discard" duration="0" buffif="coretemp greater 0" debuffif="coretemp less -100" type="coretemp">
+<modify id="0" stat="coretemp" setValue="70"/>
+</buff> -->
+
 <!--
 Drunkeness: Starts with the DrinkBeer buff, which is triggered by the Beer item each time a beer is consumed.
 

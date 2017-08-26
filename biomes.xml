@@ -1709,7 +1709,8 @@ If you do not declare them, the decorations of the main biome are used.
 		<decal texture="14" face="0" prob="0.001" />
 		<decal texture="15" face="0" prob="0.001" />
 		<blockontop blockname="lootStreetHelper" prob="0.001" rotatemax="7"/>
-		<blockontop blockname="randomCarsHelper" prob="0.0015" rotatemax="3"/>
+		<!-- <blockontop blockname="randomCarsHelper" prob="0.0015" rotatemax="3"/> -->
+		<blockontop blockname="randomCarsHelper" prob="0.003" rotatemax="3"/>
 		<blockontop blockname="tire" rotatemax="3" prob="0.001" />
 		<blockontop blockname="cinderBlocks01" rotatemax="3" prob="0.0007" />
 		<blockontop blockname="cinderBlocks02" rotatemax="3" prob="0.0007" />
@@ -1736,7 +1737,8 @@ If you do not declare them, the decorations of the main biome are used.
 		<decal texture="14" face="0" prob="0.005" />
 		<decal texture="15" face="0" prob="0.005" />
 		<blockontop blockname="lootStreetHelper" prob="0.001" rotatemax="7"/>
-		<blockontop blockname="randomCarsHelper" prob="0.0015" rotatemax="3"/>
+		<!-- <blockontop blockname="randomCarsHelper" prob="0.0015" rotatemax="3"/> -->
+		<blockontop blockname="randomCarsHelper" prob="0.003" rotatemax="3"/>
 		<blockontop blockname="tire" rotatemax="3" prob="0.001" />
 		<blockontop blockname="cinderBlocks01" rotatemax="3" prob="0.0007" />
 		<blockontop blockname="cinderBlocks02" rotatemax="3" prob="0.0007" />
@@ -1765,7 +1767,8 @@ If you do not declare them, the decorations of the main biome are used.
 		<decal texture="15" face="0" prob="0.005" />
 		<blockontop blockname="lootStreetHelper" prob="0.001" rotatemax="7"/>
 		<blockontop blockname="treeBrownGrassDiagonal" rotatemax="3" prob="0.05" />
-		<blockontop blockname="randomCarsHelper" prob="0.0005" rotatemax="3"/>
+		<!-- <blockontop blockname="randomCarsHelper" prob="0.0005" rotatemax="3"/> -->
+		<blockontop blockname="randomCarsHelper" prob="0.001" rotatemax="3"/>
 		<!--blockontop blockname="potassiumNitrate" prob="0.02" offset="-1"/-->
 	</poi>
 	<poi name="Water" poimapcolor="#0063ff" blockname="water" blockbelow="sand" yposfill="58" />
