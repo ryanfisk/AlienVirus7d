@@ -6498,7 +6498,7 @@ kind of free
 	<property name="Extends" value="cntVendingMachine"/>
 	<property name="Model" value="Entities/LootContainers/vending_machinePrefab"/>
 	<property name="TraderID" value="4"/>
-	<property name="Buff" value="shockedBuff"/>
+	<!-- <property name="Buff" value="shockedBuff"/> -->
 </block>
 	<!-- 1 Free -->
 
