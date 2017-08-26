@@ -5,9 +5,13 @@
     <!--Faulty Brown-->
     <quality key="1" color="9C8867"/>
     <!--Poor Orange-->
-    <quality key="2" color="CF7F29"/>
+    <!-- <quality key="2" color="CF7F29"/> -->
     <!--Good Yellow-->
-    <quality key="3" color="A2A41B"/>
+    <!-- <quality key="3" color="A2A41B"/> -->
+    <!--Poor Yellow-->
+    <quality key="2" color="A2A41B"/>
+    <!--Good Orange-->
+    <quality key="3" color="CF7F29"/>
     <!--Fine Green-->
     <quality key="4" color="42C234"/>
     <!--Great Blue-->
