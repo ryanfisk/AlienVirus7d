@@ -3502,7 +3502,7 @@ Mesh files no longer used:
 <!-- * * * * * * * * * * armor tiers * * * * * * * * * * -->
 
 <item id="350" name="plantFiberPants"> <!-- armorMasterPlantFiberClothes -->
-	<property name="Insulation" value="2"/>
+	<property name="Insulation" value="0"/>
 	<property name="Encumbrance" value="0.01"/>
 	<property name="Material" value="plants"/>
 	<property name="RepairTools" value="yuccaFibers"/>
@@ -3673,7 +3673,7 @@ Mesh files no longer used:
 </item>
 
 <item id="364" name="animalHideBoots"> <!-- armorMasterHideArmor -->
-	<property name="Insulation" value="4"/>
+	<property name="Insulation" value="0"/>
 	<property name="Encumbrance" value="0.02"/>
 	<property name="Material" value="animalHide"/>
 	<property name="RepairTools" value="animalHide"/>
@@ -3760,7 +3760,7 @@ Mesh files no longer used:
 </item>
 
 <item id="370" name="leatherBoots"> <!-- armorMasterLeatherArmor -->
-	<property name="Insulation" value="1"/>
+	<property name="Insulation" value="0"/>
 	<property name="Encumbrance" value="0.02"/>
 	<property name="Material" value="leather"/>
 	<property name="RepairTools" value="leather"/>
@@ -4106,7 +4106,7 @@ Mesh files no longer used:
 </item>
 
 <item id="397" name="hazmatBoots"> <!-- armorMasterHazMatArmor -->
-	<property name="Insulation" value="6"/>
+	<property name="Insulation" value="0"/>
 	<property name="Encumbrance" value="0.03"/>
 	<property name="Material" value="MmilitaryFiber"/>
 	<property name="RepairTools" value="militaryFiber"/>
@@ -4154,7 +4154,7 @@ Mesh files no longer used:
 
 <item id="399" name="hazmatShirt"> <!-- hazMatArmor -->  <!-- is now a hazMatJacket -->
 	<property name="Extends" value="hazmatBoots"/>
-	<property name="Insulation" value="10"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.45"/>
 	<property name="Weight" value="10"/>
 	<property name="EconomicValue" value="3200"/>
@@ -4299,7 +4299,7 @@ Mesh files no longer used:
 <!-- * * * * * * * * * * general clothing * * * * * * * * * * -->
 
 <item id="450" name="cowboyHat">
-	<property name="Insulation" value="-10"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.15"/>
 	<property name="Encumbrance" value="0.01"/>
 	<property name="Material" value="leather"/>
@@ -4351,7 +4351,7 @@ Mesh files no longer used:
 	<property name="Extends" value="plantFiberPants" param1="DescriptionKey"/>
 	<property name="CustomIcon" value="cowboyHat"/>
 	<property name="CustomIconTint" value="227,206,164"/>
-	<property name="Insulation" value="-10"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.05"/>
 	<property name="FuelValue" value="4"/>
 	<property name="EquipSlot" value="Head"/>
@@ -4367,7 +4367,7 @@ Mesh files no longer used:
 </item>
 
 <item id="453" name="ballCap">
-	<property name="Insulation" value="-5"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.05"/>
 	<property name="Meshfile" value="Items/Clothing/Head/PrefabBallcap"/>
 	<property name="Material" value="cloth"/>
@@ -4403,7 +4403,7 @@ Mesh files no longer used:
 </item>
 
 <item id="456" name="skullCap"> <!-- skullCapMaster -->
-	<property name="Insulation" value="10"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.1"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
@@ -4760,7 +4760,7 @@ Mesh files no longer used:
 </item>
 
 <item id="481" name="animalHidePoncho">
-	<property name="Insulation" value="-20"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.45"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="HoldType" value="45"/>
@@ -4873,7 +4873,7 @@ Mesh files no longer used:
 </item>
 
 <item id="490" name="denimPants"> <!-- clothPantsMaster -->
-	<property name="Insulation" value="2"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
@@ -4937,7 +4937,7 @@ Mesh files no longer used:
 
 <item id="494" name="armyPants">
 	<property name="Extends" value="denimPants"/>
-	<property name="Insulation" value="3"/>
+	<property name="Insulation" value="0"/>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_army_pants"/>
 		<property name="Overlay0" value="clothes_army_pants"/>
@@ -4948,7 +4948,7 @@ Mesh files no longer used:
 </item>
 
 <item id="497" name="tankTopWhite"> <!-- sleevelessClothShirtMaster -->
-	<property name="Insulation" value="-10"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
@@ -5044,7 +5044,7 @@ Mesh files no longer used:
 </item>
 
 <item id="507" name="wornBoots">
-	<property name="Insulation" value="4"/>
+	<property name="Insulation" value="0"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material" value="cloth"/>
@@ -5090,7 +5090,7 @@ Mesh files no longer used:
 </item>
 
 <item id="509" name="shirt"> <!-- longClothShirtMaster -->
-	<property name="Insulation" value="2"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
@@ -5171,7 +5171,7 @@ Mesh files no longer used:
 
 <item id="515" name="armyShirt">
 	<property name="Extends" value="shirt"/>
-	<property name="Insulation" value="3"/>
+	<property name="Insulation" value="0"/>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_army_shirt"/>
 		<property name="Overlay0" value="clothes_army_shirt"/>
@@ -5181,7 +5181,7 @@ Mesh files no longer used:
 </item>
 
 <item id="517" name="leatherDuster">
-	<property name="Insulation" value="30"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.55"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
@@ -5227,7 +5227,7 @@ Mesh files no longer used:
 </item>
 
 <item id="520" name="pufferCoat">
-	<property name="Insulation" value="40"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.45"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
@@ -5319,7 +5319,7 @@ Mesh files no longer used:
 </item>
 
 <item id="531" name="sweatshirt"> <!-- longClothShirtMaster -->
-	<property name="Insulation" value="5"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
@@ -5400,7 +5400,7 @@ Mesh files no longer used:
 </item>
 
 <item id="537" name="tshirtWhite"> <!-- sleevelessClothShirtMaster -->
-	<property name="Insulation" value="-5"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
@@ -5484,7 +5484,7 @@ Mesh files no longer used:
 
 <item id="543" name="skirt">
 	<property name="Extends" value="denimPants"/>
-	<property name="Insulation" value="-10"/>
+	<property name="Insulation" value="0"/>
 	<property class="UMA">
 		<property name="Mesh" value="skirt"/>
 		<property name="Overlay0" value="skirt"/>
@@ -5496,7 +5496,7 @@ Mesh files no longer used:
 </item>
 
 <item id="544" name="jacketWhite">
-	<property name="Insulation" value="30"/>
+	<property name="Insulation" value="0"/>
 	<property name="Waterproof" value="0.4"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
@@ -5646,7 +5646,7 @@ Mesh files no longer used:
 
 <item id="557" name="denimShortsPants">
 	<property name="Extends" value="denimPants"/>
-	<property name="Insulation" value="-10"/>
+	<property name="Insulation" value="0"/>
 	<property class="UMA">
 		<property name="Mesh" value="base_legs"/>
 		<property name="Overlay0" value="legs"/>
@@ -5705,7 +5705,7 @@ Mesh files no longer used:
 </item>
 
 <item id="564" name="hoodedSweatshirtWhite"> <!-- hoodedClothShirtMaster -->
-	<property name="Insulation" value="10"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
@@ -5895,7 +5895,7 @@ Mesh files no longer used:
 <item id="588" name="gothicPants"> <!-- leatherArmor -->
 	<property name="Extends" value="leatherPants"/>
 	<property name="Weight" value="50"/>
-	<property name="Insulation" value="2"/>
+	<property name="Insulation" value="0"/>
 	<property name="EquipSlot" value="Legs"/>
 	<property class="Attributes">
 		<property name="ConcussiveProtection" value="0.16,0.4"/>
@@ -5912,7 +5912,7 @@ Mesh files no longer used:
 
 <item id="589" name="overalls"> <!-- warmClothPants -->
 	<property name="Extends" value="denimPants"/>
-	<property name="Insulation" value="3"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property class="UMA">
 		<property name="Mesh" value="clothes_overalls"/>
@@ -5922,7 +5922,7 @@ Mesh files no longer used:
 
 <item id="590" name="flannelShirtWhite"> <!-- new icon xxx -->
 	<property name="Extends" value="sweatshirt"/>
-	<property name="Insulation" value="5"/>
+	<property name="Insulation" value="0"/>
 	<property class="UMA">
 		<property name="Mesh" value="plaid_shirt"/>
 		<property name="Overlay0" value="plaid_shirt"/>
@@ -5989,7 +5989,7 @@ Mesh files no longer used:
 
 <item id="598" name="suitPantsBlack"> <!-- suitPantsMaster -->
 	<property name="CustomIconTint" value="57,57,57"/>
-	<property name="Insulation" value="2"/>
+	<property name="Insulation" value="0"/>
 	<!-- <property name="Encumbrance" value="0.001"/> -->
 	<property name="Material" value="cloth"/>
 	<property name="RepairTools" value="cloth"/>
