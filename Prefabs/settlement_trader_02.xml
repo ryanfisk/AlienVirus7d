@@ -6,10 +6,14 @@
     <property name="RotationToFaceNorth" value="2" />
     <property name="YOffset" value="-1" />
     <property name="AllowedTownships" value="city,town,rural,wilderness" />
-    <property name="AllowedBiomes" value="pine_forest,forest" />
-    <property name="TraderArea" value="True" />
-    <property name="TraderAreaProtect" value="20,0,20" />
-    <property name="TraderAreaTeleportSize" value="33, 26, 33" />
+    <!-- <property name="AllowedBiomes" value="pine_forest,forest" /> -->
+    <!-- <property name="TraderArea" value="True" /> -->
+    <!-- <property name="TraderAreaProtect" value="20,0,20" /> -->
+    <!-- <property name="TraderAreaTeleportSize" value="33, 26, 33" /> -->
+    <!-- <property name="TraderAreaTeleportCenter" value="1, 1, 1" /> -->
+    <property name="TraderArea" value="False" />
+    <property name="TraderAreaProtect" value="0,0,0" />
+    <property name="TraderAreaTeleportSize" value="0, 0, 0" />
     <property name="TraderAreaTeleportCenter" value="1, 1, 1" />
     <property name="ExcludeDistantPOIMesh" value="False" />
     <property name="DistantPOIYOffset" value="0" />

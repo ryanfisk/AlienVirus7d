@@ -8428,7 +8428,7 @@ kind of free
 <block id="857" name="snowberry3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Texture" value="568"/>
-	<drop event="Harvest" name="snowberryPlant" count="1"/>
+	<drop event="Harvest" name="foodYuccaFruit" count="1"/>
 	<property name="DescriptionKey" value="snowberryPlantDesc"/>
 </block>
 
